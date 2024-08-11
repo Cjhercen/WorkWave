@@ -17,7 +17,7 @@ public class Role implements GrantedAuthority {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 
 	@Enumerated(EnumType.STRING)
 	private RoleName role;
@@ -27,11 +27,11 @@ public class Role implements GrantedAuthority {
 		return role.name();
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
